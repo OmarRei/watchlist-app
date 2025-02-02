@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="authContainer" class="container">
+        <div class="auth-box">
+            <h2>Watchlist App</h2>
+            <div id="loginForm">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <button onclick="showSignup()">Create Account</button>
+            </div>
+            <div id="signupForm" style="display: none;">
+                <input type="text" id="newUsername" placeholder="Username">
+                <input type="password" id="newPassword" placeholder="Password">
+                <button onclick="signup()">Sign Up</button>
+                <button onclick="showLogin()">Back to Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="appContainer" class="container" style="display: none;">
+        <header>
+            <h1>Welcome, <span id="currentUser"></span></h1>
+            <button onclick="logout()">Logout</button>
+        </header>
+        
+        <div class="input-section">
+            <input type="text" id="titleInput" placeholder="Enter title...">
+            <button onclick="addItem()">Add Item</button>
+        </div>
+        
+        <ul id="watchList" class="watch-list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
